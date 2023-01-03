@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.searchBar {
+  position: relative;
+  height: 50px;
+}
+
+.searchBar .input {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.4s ease;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  font-size: 24px;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease;
+}
+
+.input:focus,
+.btn:focus {
+  outline: none;
+}
+
+.searchBar.active .input {
+  width: 200px;
+}
+.searchBar.active .btn {
+  transform: translateX(200px);
+}
