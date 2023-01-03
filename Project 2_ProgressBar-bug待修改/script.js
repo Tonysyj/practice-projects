@@ -69,13 +69,14 @@ function update() {
   // btn disabled
   if (currentActive === 1) {
     prev.disabled = true
+    next.disabled = false
   }
   else if (currentActive === step.length) {
     next.disabled = true
+    prev.disabled = false
   }
   else {
     prev.disabled = false
     next.disabled = false
+  }
 }
-}
-
